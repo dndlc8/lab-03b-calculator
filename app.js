@@ -1,72 +1,41 @@
+import {add, sub, multi, div} from '../test/equations.js'
+
+
 const addButton = document.getElementById('sum-button');
+const subButton = document.getElementById('sub-button');
+const multiButton = document.getElementById('multi-button');
+const divButton = document.getElementById('div-button');
+
+const input1 = document.getElementById('add-one');
+const input2 = document.getElementById('add-two');
+const input3 = document.getElementById('minus-one');
+const input4 = document.getElementById('minus-two');
+const input5 = document.getElementById('multi-one');
+const input6 = document.getElementById('multi-two');
+const input7 = document.getElementById('div-one');
+const input8 = document.getElementById('div-two');
+
 
 addButton.addEventListener('click', () => {
     // post-click logic goes here!
-    const input1 = document.getElementById('add-one');
-    const input2 = document.getElementById('add-two');
     const resultSpan = document.getElementById('sum-result');
-
-    console.log(input1.value);
-    console.log(input2.value);
-    const firstValue = Number(input1.value);
-    const secondValue = Number(input2.value);
-    const sum = firstValue + secondValue;
-
-    console.log(sum);
-    resultSpan.textContent = sum;
-
-})
-const subButton = document.getElementById('sub-button');
+    resultSpan.textContent = add(Number(input1.value), Number(input2.value));
+});
 
 subButton.addEventListener('click', () => {
     // post-click logic goes here!
-    const input1 = document.getElementById('minus-one');
-    const input2 = document.getElementById('minus-two');
     const resultSpan = document.getElementById('sub-result');
-
-    console.log(input1.value);
-    console.log(input2.value);
-    const firstValue = Number(input1.value);
-    const secondValue = Number(input2.value);
-    const sub = firstValue - secondValue;
-
-    console.log(sub);
-    resultSpan.textContent = sub;
-
-})
-const multiButton = document.getElementById('multi-button');
+    resultSpan.textContent = sub(Number(input3.value), Number(input4.value));
+});
 
 multiButton.addEventListener('click', () => {
     // post-click logic goes here!
-    const input1 = document.getElementById('multi-one');
-    const input2 = document.getElementById('multi-two');
     const resultSpan = document.getElementById('multi-result');
-
-    console.log(input1.value);
-    console.log(input2.value);
-    const firstValue = Number(input1.value);
-    const secondValue = Number(input2.value);
-    const multi = firstValue * secondValue;
-
-    console.log(multi);
-    resultSpan.textContent = multi;
-
-})
-const divButton = document.getElementById('div-button');
+    resultSpan.textContent = multi(Number(input5.value), Number(input6.value));
+});
 
 divButton.addEventListener('click', () => {
     // post-click logic goes here!
-    const input1 = document.getElementById('div-one');
-    const input2 = document.getElementById('div-two');
     const resultSpan = document.getElementById('div-result');
-
-    console.log(input1.value);
-    console.log(input2.value);
-    const firstValue = Number(input1.value);
-    const secondValue = Number(input2.value);
-    const div = firstValue / secondValue;
-
-    console.log(div);
-    resultSpan.textContent = div;
-
-})
+    resultSpan.textContent = div(Number(input7.value), Number(input8.value));
+});
