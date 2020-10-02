@@ -1,4 +1,4 @@
-import {add, sub, multi, div} from '../test/equations.js'
+import { add, sub, multi, div } from './test/equations.js'
 
 
 const addButton = document.getElementById('sum-button');
